@@ -1,5 +1,5 @@
-photoFolder = "/DCIM"
-  
+photoFolder = "/DCIM"  --写真格納フォルダ
+
   --最新のディレクトリ名を取得
   local lastDirNum = 0
   local lastDirName = ""
@@ -37,7 +37,7 @@ photoFolder = "/DCIM"
     return
   end
   
-  --dropBoxへアップロード
+  --Dropboxへアップロード
   b, c, h = fa.request{
     url = "https://api-content.dropbox.com/1/files_put/dropbox/" .. lastFileName .. "?overwrite=true",
     method = "PUT",
